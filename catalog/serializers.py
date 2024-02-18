@@ -2,7 +2,7 @@ from django.core import exceptions
 import django.contrib.auth.password_validation as validators
 from rest_framework import serializers
 
-from .models import User
+from .models import User, Hotel
 
 
 class UserSerializer(serializers.ModelSerializer):
@@ -37,3 +37,10 @@ class UserSerializer(serializers.ModelSerializer):
         extra_kwargs = {
             "password": {"write_only": True, "style": {"input_type": "password"}},
         }
+
+
+class HotelSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Hotel
+        fields = "__all__"
