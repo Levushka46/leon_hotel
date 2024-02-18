@@ -77,8 +77,12 @@ WSGI_APPLICATION = "leon_hotel.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "leonhoteldb",
+        "USER": "leonhotel",
+        "PASSWORD": "leonhotel_password",
+        "HOST": "db",
+        "PORT": "5432",
     }
 }
 
@@ -126,3 +130,11 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # user model
 AUTH_USER_MODEL = "catalog.User"
+
+ADMINS = (
+    # ('Your Name', 'your_email@domain.com'),
+    ("admin", "admin@mysite.com"),
+)
+ADMIN_USERNAME = "admin"
+ADMIN_EMAIL = "admin@mysite.com"
+ADMIN_INITIAL_PASSWORD = "admin"  # To be changed after first login by admin
