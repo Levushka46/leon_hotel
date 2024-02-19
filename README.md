@@ -7,8 +7,9 @@
 export GOOGLE_CLIENT_ID=ВАШ_КЛЮЧ
 export GOOGLE_CLIENT_SECRET=ВАШ_КЛЮЧ
 ```
-Запустить docker compose.
+Применить переменные окружения и запустить docker compose.
 ```
+source .env
 docker compose up --build -d
 ```
 Перейти по http://127.0.0.1:8000/admin/ и войти используя admin/admin.  
