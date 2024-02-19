@@ -3,6 +3,9 @@ version: '3.8'
 services:
 
   web:
+    environment:
+      - GOOGLE_CLIENT_ID=${GOOGLE_CLIENT_ID}
+      - GOOGLE_CLIENT_SECRET=${GOOGLE_CLIENT_SECRET}
     build:
       context: .
       dockerfile: ./Dockerfile

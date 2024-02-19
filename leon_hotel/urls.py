@@ -22,4 +22,5 @@ import catalog.urls
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("api/", include(catalog.urls)),
+    path("accounts/", include("allauth.urls")),
 ]
